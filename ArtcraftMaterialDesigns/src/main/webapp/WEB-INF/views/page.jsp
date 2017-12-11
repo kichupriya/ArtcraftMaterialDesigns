@@ -38,45 +38,51 @@
 <link href="${css}/myapp.css" rel="stylesheet">
 </head>
 <body>
-    <div class="se-pre-con"></div>
-	
+	<div class="se-pre-con"></div>
 </head>
 
 <body>
-<div class="wrapper">
+	<div class="wrapper">
 
-	<!-- Navigation -->
-	<%@include file="header.jsp"%>
+		<!-- Navigation -->
+		<%@include file="header.jsp"%>
 
-	<!-- Page content -->
-	
-	<div class="content">
-	<!-- loading the home content  -->
-	<c:if test="${userClickHome == true }">
-		<%@include file="home.jsp" %>
-	</c:if>
-	
-	<!-- load only when user clicks about -->
-	<c:if test="${userClickAbout == true }">
-		<%@include file="about.jsp"%>
-	</c:if>
+		<!-- Page content -->
 
-	<!-- load only when user clicks contact -->
-	<c:if test="${userClickContact == true }">
-		<%@include file="contact.jsp"%>
-	</c:if>
+		<div class="content">
+			<!-- loading the home content  -->
+			<c:if test="${userClickHome == true }">
+				<%@include file="home.jsp"%>
+			</c:if>
+
+			<!-- load only when user clicks about -->
+			<c:if test="${userClickAbout == true }">
+				<%@include file="aboutus.jsp"%>
+			</c:if>
+
+			<!-- load only when user clicks contact -->
+			<c:if test="${userClickContact == true }">
+				<%@include file="contact.jsp"%>
+			</c:if>
+		</div>
+
+		<!-- load only when user clicks contact -->
+		<c:if
+			test="${userClickAllProducts == true or userclickscatgeoryProducts == true }">
+			<%@include file="./listofproducts.jsp"%>
+		</c:if>
 	</div>
 
 	<!-- footer comes here -->
-	<%@include file="footer.jsp"%>
-	
+	<%@include file="./footer.jsp"%>
+
 	</div>
 	<!-- /.container -->
 
 	<!--Self code JavaScript -->
 	<script src="${js}/myapp.js"></script>
 	<script src="${js}/bootstrap.js"></script>
-</div>
+	</div>
 </body>
 
 </html>

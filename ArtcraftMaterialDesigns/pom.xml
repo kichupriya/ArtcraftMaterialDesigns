@@ -1,5 +1,5 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>Art.org.niit</groupId>
 	<artifactId>ArtcraftMaterialDesigns</artifactId>
@@ -13,14 +13,23 @@
 		<spring.version>5.0.1.RELEASE</spring.version>
 	</properties>
 	<dependencies>
+	
+	<!-- Link backend project -->
+	<dependency>
+	<groupId>Art.org.niit</groupId>
+  <artifactId>MaterialBACKEND</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  </dependency>
+	
 		<!-- JAVA EE API -->
 		<dependency>
 			<groupId>javax</groupId>
-			<artifactId>javaee-api</artifactId>
+	 		<artifactId>javaee-api</artifactId>
 			<version>${javaee.version}</version>
 			<scope>provided</scope>
 		</dependency>
-
+		
+   <!-- JUNIT -->
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
